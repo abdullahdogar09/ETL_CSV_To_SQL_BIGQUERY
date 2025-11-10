@@ -1,0 +1,6 @@
+Libraries Installed 
+1). Pandas
+2). google-cloud-bigquery
+3). pandas-gbq
+4). duckdb
+5). prefect
