@@ -30,7 +30,14 @@ def transform_data(df):
         # drop duplicate rows based on company_id, keeping the first occurance
         df.drop_duplicates(subset="COMPANY_ID", keep="first", inplace=True)
         #-----------------------------------------------------------------------------------
-
+        # drop entire blank rows 
+        df.dropna(how='all', inplace=True)
+        #-----------------------------------------------------------------------------------
+        # replace a value with null in a column 
+        df["ADDRESS"] = df["ADDRESS"].replace("-", np.nan)
+        df["ADDRESS"] = df["ADDRESS"].replace("--", np.nan)
+        #-----------------------------------------------------------------------------------
+        
         print("Transformation complete.")
         return df
     except Exception as e:
