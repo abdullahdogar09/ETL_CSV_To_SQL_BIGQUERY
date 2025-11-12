@@ -37,7 +37,7 @@ def transform_data(df):
         df["ADDRESS"] = df["ADDRESS"].replace("-", np.nan)
         df["ADDRESS"] = df["ADDRESS"].replace("--", np.nan)
         #-----------------------------------------------------------------------------------
-        
+
         print("Transformation complete.")
         return df
     except Exception as e:
