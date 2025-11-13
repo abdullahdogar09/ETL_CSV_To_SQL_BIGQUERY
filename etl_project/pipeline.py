@@ -20,6 +20,8 @@ def run_pipeline():
         return
     df_transformed = transform_data(df)
 
+    #Load Data to DuckDB (Optional)
+    # load_to_duckdv(df_transformed)
     load_data(df_transformed, project_id, dataset_id, table_name)
     print("ETL Pipeline completed successfully.")
 
