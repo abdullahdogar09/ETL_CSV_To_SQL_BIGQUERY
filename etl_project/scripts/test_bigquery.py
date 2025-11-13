@@ -1,5 +1,9 @@
+import os 
+from dotenv import load_dotenv
 import pandas as pd 
 from pandas_gbq import to_gbq
+
+load_dotenv()
 
 data = {
     "id": [1, 2, 3],
@@ -9,8 +13,8 @@ data = {
 
 df = pd.DataFrame(data)
 
-project_id = "etl-csv-to-sql-bigquery"
-dataset_id = "etl_demo_project"
+project_id = os.getenv("PROJECT_ID")
+dataset_id = os.getenv("DATASET_ID")
 table_name = "test_table"
 
 to_gbq(df, f"{dataset_id}.{table_name}", project_id=project_id, if_exists='replace')

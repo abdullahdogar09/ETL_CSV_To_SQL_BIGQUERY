@@ -1,11 +1,15 @@
+import os 
+from dotenv import load_dotenv
 from scripts.extract import extract_data
 from scripts.transform import transform_data
 from scripts.load import load_data
 
+load_dotenv()
+
 def run_pipeline():
     file_path = "./etl_project/data/companies.csv"
-    project_id = "etl-csv-to-sql-bigquery"
-    dataset_id = "etl_demo_project"
+    project_id = os.getenv("PROJECT_ID")
+    dataset_id = os.getenv("DATASET_ID")
     table_name = "companies_cleaned"
 
     print("Starting ETL Pipeline....")
