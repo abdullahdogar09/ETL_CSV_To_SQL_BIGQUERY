@@ -4,3 +4,24 @@ Libraries Installed
 3). pandas-gbq
 4). duckdb
 5). prefect
+
+
+--------------------------------------------------------------------------------------------------
+
+HOW TO CONNECT WITH bigquery
+1). Create a free Sandbox account in Google bigquery
+2). Create a project in sandbox and notedown project id
+3). Create a dataset in your project and notedown dataset id 
+4). Allow api access to your project from google cloud console
+5). Install the gcloud CLI (Google Cloud SDK) in your local system
+    https://cloud.google.com/sdk/docs/install
+6). Open your repository in vs code and open terminal and run the command
+    gcloud auth application-default login
+    By this method you can connect your local system with bigquery sandbox account using your google account credentials
+7). A json file will be downloaded in your local system. Keep it safe for future reference.
+8). Install required packages
+    pip install pandas pandas-gbq google-cloud-bigquery
+9). Create your load_data function
+    load_data(df, project_id, dataset_id, table_name)
+---------------------------------------------------------------------------------------------------
+
