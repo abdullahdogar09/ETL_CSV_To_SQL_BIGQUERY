@@ -1,0 +1,4 @@
+etl_projec/.env
+
+__pycache__/
+*.pyc
