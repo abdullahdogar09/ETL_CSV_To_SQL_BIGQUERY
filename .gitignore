@@ -1,4 +1,4 @@
-etl_projec/.env
+.env
 
 __pycache__/
 *.pyc
