@@ -3,7 +3,7 @@ from scripts.transform import transform_data
 from scripts.load import load_data
 
 def run_pipeline():
-    file_path = "data/companies.csv"
+    file_path = "./etl_project/data/companies.csv"
     project_id = "etl-csv-to-sql-bigquery"
     dataset_id = "etl_demo_project"
     table_name = "companies_cleaned"

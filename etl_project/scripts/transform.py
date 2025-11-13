@@ -4,7 +4,7 @@ import numpy as np
 def transform_data(df):
     try:
         # Change column names to uppercase
-        df.columns = df.columns.str.upper(inplace=True)
+        df.columns = df.columns.str.upper()
         #-----------------------------------------------------------------------------------
         # Create an index column
         df.reset_index(inplace=True)
