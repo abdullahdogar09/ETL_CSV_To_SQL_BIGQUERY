@@ -2,9 +2,9 @@
 
 from prefect import flow,task
 import pandas as pd 
-from scripts.with_duckdb import load_to_duckdb
-from scripts.extract import extract_data
-from scripts.transform import transform_data
+from with_duckdb import load_to_duckdb
+from extract import extract_data
+from transform import transform_data
 
 @flow
 def etl_flow():
